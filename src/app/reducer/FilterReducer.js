@@ -6,6 +6,12 @@ const filterReducer = (state, action) => {
         ...state,
         filterProducts: action.payload,
         allProducts: action.payload,
+        isFilterLoading:false,
+        filterObj: {
+          ...state.filterObj,
+          range: Math.max(...action.payload.map((each)=>each.price)),
+        },
+
       };
 
     case "SET_GRID_VIEW":
@@ -85,8 +91,9 @@ const filterReducer = (state, action) => {
       if (!allProducts) {
         return state; // Return the current state if filterProducts is undefined or empty
       }
-
       let tempFilterProducts = [...allProducts];
+
+
       const { text, category, company, range, color } = filterObj;
       if (text) {
         tempFilterProducts = tempFilterProducts.filter((product) =>
@@ -104,11 +111,14 @@ const filterReducer = (state, action) => {
           (each) => each.company == company
         );
       }
-      if (range) {
-        tempFilterProducts = tempFilterProducts.filter(
-          (each) => each.price < range
-        );
-      }
+     if (range==0){
+      tempFilterProducts = tempFilterProducts.filter((each)=>each.price==0)
+     }else{
+      tempFilterProducts = tempFilterProducts.filter(
+        (each) => each.price <= range
+      );
+     }
+
       if (color && color !== "all") {
         tempFilterProducts = tempFilterProducts.filter((each) =>
           each.colors.includes(color)
@@ -117,10 +127,11 @@ const filterReducer = (state, action) => {
 
       return {
         ...state,
-        filterProducts: tempFilterProducts,
+        filterProducts: tempFilterProducts ,
       };
 
     case "CLEAR_FILTER":
+
       return {
         ...state,
         filterObj: {
@@ -130,7 +141,7 @@ const filterReducer = (state, action) => {
           company:'all',
           color: "all",
           maxPrice: 10000000,
-          range: state.filterObj.minPrice,
+          range: Math.max(...action.payload.map((each)=>each.price)),
           minPrice: state.filterObj.minPrice,
         },
       };

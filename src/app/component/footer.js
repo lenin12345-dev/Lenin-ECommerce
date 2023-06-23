@@ -10,10 +10,13 @@ import IconButton from '@mui/material/IconButton';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import TextField from '@mui/material/TextField';
 import Divider from '@mui/material/Divider';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import InstagramIcon from '@mui/icons-material/Instagram';
 
 export default function Footer() {
   return (
-    <Box display= 'flex' flexDirection= 'column' alignItems= 'center'  >
+    <Box display= 'flex' flexDirection= 'column' alignItems= 'center' mt={2}  >
       <Box sx={{ backgroundColor:'#F0FFF0', borderRadius:'1rem',maxWidth:'80vw',width:'40vw',padding:'2rem 4rem',boxShadow:'0 2px 4px rgba(0, 0, 0, 0.2)',transform:'translateY(10%)'}} display= 'flex' alignItems= 'center' justifyContent= 'space-between'>
       <Box >
 
@@ -24,34 +27,27 @@ export default function Footer() {
             Talk to us today
           </Typography>
       </Box>
-      <Button variant='contained' color="primary">
+      <Button variant='contained' color="secondary">
        Get started
       </Button>
 
       </Box>
-      <Box py={4} sx={{width:'100%', backgroundColor:'rgb(10, 20, 53)' }} alignItems= 'center' justifyContent= 'space-evenly'  display= 'flex'>
-      <Box >
+      <Box py={6} sx={{width:'100%', backgroundColor:'rgb(10, 20, 53)' }} alignItems= 'start' justifyContent= 'space-evenly'  display= 'flex'>
+      <Box width={'20%'} >
 
-<Typography sx = {{ fontWeight:'500',color:'#ffffff'}} variant="h6"  >
-       Lenin The Legend
-    </Typography>
-    <Typography sx = {{ fontWeight:'500',color:'#ffffff'}} variant="h6"  >
-    Lorem ipsum dolor, 
+<Typography sx = {{ fontWeight:'500',color:'#ffffff'}} variant="h6" paragraph={true} >
+At LeninGeekStore, we are dedicated to providing high-quality products and exceptional customer service. We strive to offer a wide range of options that cater to every customer's unique needs and preferences.
     </Typography>
 
-    <Typography sx = {{ fontWeight:'500',color:'#ffffff'}} variant="h6"  >
-
-    sit amet consectetur adipisicing elit.
-    </Typography>
 
 </Box>
-<Box display= 'flex' flexDirection= 'column' alignItems= 'center' mt={2} >
+<Box display= 'flex' flexDirection= 'column' alignItems= 'center' justifyContent={'space-between'} >
 
-<Typography sx = {{ fontWeight:'500',color:'#ffffff',marginBottom:'4px'}} variant="h6"  >
+<Typography sx = {{ fontWeight:'500',color:'#ffffff',marginBottom:'6px'}} variant="h6"  >
 Subscribe to get important updates
     </Typography>
     <TextField
-      label="Enter Text"
+      label="Enter your email"
       variant="outlined"
       sx={{
         '& .MuiOutlinedInput-root': {
@@ -61,58 +57,60 @@ Subscribe to get important updates
           },
           '&::placeholder': {
             color: 'white',
+            marginBottom:2
           },
           '& input': {
             color: 'white',
-            backgroundColor:'white'
+            backgroundColor:'white',
+          height: 10,
+
           },
           "& .MuiFilledInput-root": {
             background: "rgb(232, 241, 250)"
           },
-          marginBottom:'8px'
+          marginBottom:'12px',
+
+     
         },
       }}
     />
-             <Button variant='contained' color="primary">
+             <Button variant='contained'  color="secondary">
        Get started
       </Button>
 </Box>
-<Box >
+<Box display={'flex'} flexDirection={'column'}  alignItems={'center'} >
 
 <Typography sx = {{ fontWeight:'500',color:'#ffffff'}} variant="h6"  >
-Follow Us
+Connect with Us
     </Typography>
     <Box display= 'flex'>
     <IconButton
             size="large"
             edge="start"
-            color="primary"
+            color="secondary"
             aria-label="menu"
-            sx={{ mr: 1 }}
           >
-            <ShoppingCartIcon />
+            <FacebookIcon />
           </IconButton>
           <IconButton
             size="large"
             edge="start"
-            color="primary"
+            color="secondary"
             aria-label="menu"
-            sx={{ mr: 1 }}
           >
-            <ShoppingCartIcon />
+            <LinkedInIcon />
           </IconButton>
           <IconButton
             size="large"
             edge="start"
-            color="primary"
+            color="secondary"
             aria-label="menu"
-            sx={{ mr: 1 }}
           >
-            <ShoppingCartIcon />
+            <InstagramIcon />
           </IconButton>
           </Box>
 </Box>
-<Box >
+<Box display='flex' flexDirection={'column'}  alignItems={'center'}>
 
 <Typography sx = {{ fontWeight:'500',color:'#ffffff'}} variant="h6"  >
 Call Us
@@ -120,7 +118,7 @@ Call Us
 
 <Typography sx = {{ fontWeight:'500',color:'#ffffff'}} variant="h6"  >
 
-9438703636
++29876543210
     </Typography>
  
 </Box>
@@ -130,18 +128,18 @@ Call Us
       <Box display= 'flex' sx={{width:'100%', backgroundColor:'rgb(10, 20, 53)',padding:2 }}  alignItems= 'center' justifyContent= 'space-evenly' >
 
 <Typography sx = {{ fontWeight:'500',color:'#ffffff'}} variant="h6"  >
-@2023 LeninTechnical. All Rights Reserved
+@ {new Date().getFullYear() }  LeninTechGeek. All Rights Reserved
 </Typography>
 
 <Box >
 
 <Typography sx = {{ fontWeight:'500',color:'#ffffff'}} variant="h6"  >
 
-PRIVACY POLICY
+Privacy Policy
     </Typography>
     <Typography sx = {{ fontWeight:'500',color:'#ffffff'}} variant="h6"  >
 
-    TERMS & CONDITIONS
+    Terms && Conditions
     </Typography>
 </Box>
 

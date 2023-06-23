@@ -15,7 +15,7 @@ export default function PageHeader({title}) {
  
   return (
     <>
-    <Box sx={{backgroundColor:'#9c27b0'}}  py={1} pl={3}>
+    <Box sx={{backgroundColor:'lightgray'}}  py={1} pl={3}>
      <Breadcrumbs aria-label="breadcrumb">
         <Link underline="hover"  href="/">
         <Typography

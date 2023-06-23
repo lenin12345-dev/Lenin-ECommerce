@@ -52,7 +52,7 @@ export default function ListView({products=[]}) {
                 >
               {each.description?.slice(0,300)}...
                 </Typography>
-                <Button component={Link} href={`/product/${each.id}`} sx={{marginTop:1}} color='primary' variant='contained'>
+                <Button component={Link} href={`/product/${each.id}`} sx={{marginTop:1}} color='secondary' variant='contained'>
                     Read More
                 </Button>
               

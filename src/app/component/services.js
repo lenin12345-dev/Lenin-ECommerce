@@ -11,6 +11,7 @@ import PaymentsIcon from '@mui/icons-material/Payments';
 import DoNotTouchIcon from '@mui/icons-material/DoNotTouch';
 import CurrencyExchangeIcon from '@mui/icons-material/CurrencyExchange';
 import Container from '@mui/material/Container';
+import theme from "../config/theme";
 
 const useStyles = makeStyles((theme) => ({
   heroImage: {
@@ -38,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
 
 }));
 const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#B0E0E6',
+    backgroundColor: theme.palette.mode === 'dark' ? '#87CEFA' : `${theme.palette.primaryLight.main}`,
     padding: theme.spacing(1),
     textAlign: 'center',
     color: theme.palette.text.secondary,
@@ -49,7 +50,7 @@ const Item = styled(Paper)(({ theme }) => ({
     justifyContent:'center'
   }));
   const MediumItem = styled(Paper)(({ theme }) => ({
-    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#B0E0E6',
+    backgroundColor: theme.palette.mode === 'dark' ? '#87CEFA' : `${theme.palette.primaryLight.main}`,
     padding: theme.spacing(1),
     textAlign: 'center',
     color: theme.palette.text.secondary,

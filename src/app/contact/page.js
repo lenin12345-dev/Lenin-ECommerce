@@ -4,6 +4,7 @@ import Box from "@mui/material/Box";
 import { Button, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import TextField from '@mui/material/TextField';
+import { useAuth0 } from '@auth0/auth0-react';
 
 const useStyles = makeStyles((theme) => ({
   heroImage: {
@@ -39,7 +40,10 @@ const useStyles = makeStyles((theme) => ({
 export default function Contact() {
   const classes = useStyles();
 
-
+  const {
+    isAuthenticated,
+    user
+  } = useAuth0();
   return (
     <Box   mt={3}>
          <Box mb={3} display= 'flex' justifyContent= 'center' flexDirection= 'column'>
@@ -86,7 +90,7 @@ export default function Contact() {
 
         />
 
-            <Button color="primary" variant="contained" >
+            <Button color="secondary" variant="contained" >
             Submit
             </Button>
     

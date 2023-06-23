@@ -12,13 +12,18 @@ import IconButton from '@mui/material/IconButton';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Link from 'next/link';
 import { useCartConetext } from '../conetext/CartContext';
-
+import { useAuth0 } from '@auth0/auth0-react';
 export default function Navbar() {
   const {totalElement } = useCartConetext();
-
+  const {
+    isAuthenticated,
+    loginWithRedirect,
+    logout,
+    user
+  } = useAuth0();
   return (
     <Box  >
-      <AppBar color='secondary' position="static">
+      <AppBar color='primary' position="static">
         <Toolbar>
           <Box sx={{ flexGrow: 1 }}>
           <Typography sx = {{ fontWeight:'bold'}} variant="h6" component="div" >
@@ -26,35 +31,47 @@ export default function Navbar() {
           </Typography>
 
           </Box>
-          <Link href={`/`} >
+          <Link  href={`/`} >
       
-          <Typography sx = {{mr:4, fontWeight:'500'}} variant="h6"  >
+          <Typography   sx = {{mr:4, fontWeight:'500', "&:hover": {
+    color: 'lightblue',
+  }}} variant="h6"  >
             Home
           </Typography>
         </Link>
+        <Typography sx = {{mr:4, fontWeight:'500',  "&:hover": {
+    color: 'lightblue',
+  },}} variant="h6"  >
+
         <Link href={`/about`} >
 
-          <Typography sx = {{mr:4, fontWeight:'500'}} variant="h6"  >
             About
-          </Typography>
         </Link>
+        </Typography>
+
+        <Typography sx = {{mr:4, fontWeight:'500',  "&:hover": {
+    color: 'lightblue',
+  },}}variant="h6"  >
 
           <Link href={`/products`} >
-          <Typography sx = {{mr:4, fontWeight:'500'}} variant="h6"  >
             Products
-          </Typography>
         </Link>
+        </Typography>
 
+
+
+          <Typography sx = {{mr:4, fontWeight:'500',  "&:hover": {
+    color: 'lightblue',
+  },}} variant="h6"  >
       <Link href={`/contact`} >
 
-          <Typography sx = {{mr:4, fontWeight:'500'}} variant="h6"  >
             Contact
-          </Typography>
         </Link>
 
-  <Button sx={{ mr: 4 }} onClick={()=>logout({ logoutParams: { returnTo: window.location.origin } })} variant='contained' color="primary">Log Out</Button>
+          </Typography>
+ {isAuthenticated? <Button sx={{ mr: 4 }} onClick={()=>logout({ logoutParams: { returnTo: window.location.origin } })} variant='contained' color="secondary">Log Out</Button>:
 
-  <Button sx={{ mr: 4 }} onClick={() => loginWithRedirect()} variant='contained' color="primary">Login</Button>
+  <Button sx={{ mr: 4 }} onClick={() => loginWithRedirect()} variant='contained' color="secondary">Login</Button>}
 
 
       <Link href={`/cart`} >

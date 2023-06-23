@@ -39,7 +39,7 @@ export default function Trusted() {
 
 
   return (
-    <Box sx={{   backgroundColor: 'lightblue',padding:8}}   my={8}>
+    <Box sx={{   backgroundColor: '#EDF7FA',padding:8}}   my={8}>
          <Box display= 'flex' justifyContent= 'center' mb={3} sx={{fontSize:20, fontWeight:'bold'}}>
             Trusted By 1000+ companies
     

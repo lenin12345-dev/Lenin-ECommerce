@@ -16,16 +16,27 @@ const ProductReducer = (state, action) => {
         (each) => each.featured === true
       );
       return {
-        isLoading: false,
+       ...state,
         isError: false,
         products: action.payload,
         featureProducts: featureProducts,
+        // isLoading: false,
+
       };
+    case "SET_API_LOADING":
+      return{
+       ...state,
+        isLoading:false
+    }
     case "API_SINGLE_LOADING":
       return {
         ...state,
-        isSingleLoading: true,
       };
+    case "SET_SINGLE_API_LOADING":
+      return{
+        ...state,
+        isSingleLoading: false,
+      }
     case "SET_APISINGLE_DATA":
       return {
         ...state,

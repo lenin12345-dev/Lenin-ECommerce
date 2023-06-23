@@ -8,17 +8,13 @@ const AppContext = createContext();
 const API = "https://api.pujakaitem.com/api/products ";
 
 const initialState = {
-  isLoading: false,
+  isLoading: true,
   isError: false,
   products: [],
   featureProducts: [],
-  isSingleLoading:false,
+  isSingleLoading:true,
   singleProduct:{
-    stars:'',
-    name:'',
-    price:'',
-    reviews:'',
-    image:[]
+
   }
 };
 
@@ -53,6 +49,12 @@ const AppProvider = ({ children }) => {
   useEffect(() => {
     getProducts();   
   }, []);
+  useEffect(() => {
+  if (state.products.length)  dispatch({ type: "SET_API_LOADING" });  
+  }, [state.products]);
+  useEffect(() => {
+    if (state.singleProduct?.image?.length)  dispatch({ type: "SET_SINGLE_API_LOADING" });  
+    }, [state.singleProduct]);
   return <AppContext.Provider value={{...state,getSingleProduct}}>{children}</AppContext.Provider>;
 };
 

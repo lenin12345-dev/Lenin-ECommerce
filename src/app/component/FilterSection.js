@@ -58,7 +58,7 @@ export const FilterSection = () => {
   const colorsData = getUniqueData(products, "colors");
   const categoryData = getUniqueData(products, "category");
   const companyData = getUniqueData(products, "company");
-
+  
   return (
     <Box
       display="flex"

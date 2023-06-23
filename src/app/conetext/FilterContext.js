@@ -12,6 +12,7 @@ import reducer from "../reducer/FilterReducer";
 
 const FilterContext = createContext();
 const initialState = {
+  isFilterLoading:true,
   filterProducts: [],
   allProducts: [],
   gridView: true,
@@ -19,8 +20,8 @@ const initialState = {
     text:'',
     category:'all',
     company:'all',
-    range: 0,
-    maxPrice: 1000000,
+    range: 10000000,
+    maxPrice: 10000000,
     minPrice: 0,
     color: "all",
 
@@ -63,7 +64,7 @@ const setRangeChange = (event)=>{
 }
 const clearFilter = ()=>{
   setSelectedIndex(0);
-  return dispatch({type:"CLEAR_FILTER"})
+  return dispatch({type:"CLEAR_FILTER",payload:products})
 }
 
   // to load all the products for grid and ,clist view

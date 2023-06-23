@@ -38,7 +38,7 @@ export const SortSection = () => {
 {  filterProducts.length?(   <Box display= 'flex' alignItems= 'center' justifyContent= 'space-between' mb={5} mx={3.5}>
       <Box>
       <IconButton
-       className= {gridView?classes.gridView:classes.buttonView}
+       className= {gridView?classes.gridView:''}
       //  sx= {{ gridView?backgroundColor:'black':backgroundColor:'white'}}
           onClick={setGridView}>
 
@@ -46,6 +46,7 @@ export const SortSection = () => {
             <GridViewIcon    className= {gridView?classes.gridView:''}  fontSize="medium" />
           </IconButton>
           <IconButton
+               className= {!gridView?classes.gridView:''}
            onClick={setListView}
      
 

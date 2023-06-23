@@ -5,6 +5,7 @@ import Grid from "@mui/material/Grid";
 import { Button, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import Container from '@mui/material/Container';
+import { Description } from "@mui/icons-material";
 
 
 
@@ -30,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function HeroSection() {
   const classes = useStyles();
-
+ let description = 'LeninStore is one of the unique online shopping sites in India where fashion is accessible to all. Check out our new arrivals to view the latest designer clothing, footwear and accessories in the market. You can get your hands on the trendiest style every season in western wear. You can also avail the best of ethnic fashion during all Indian festive occasions. You are sure to be impressed with our seasonal discounts on footwear, trousers, shirts, backpacks and more. The end-of-season sale is the ultimate experience when fashion gets unbelievably affordable.'
   return (
     <Container maxWidth="lg">
 
@@ -46,9 +47,9 @@ export default function HeroSection() {
                     Lenin Store
                 </Typography>
                 <Typography mb={2}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias atque temporibus veniam doloribus libero ad error omnis voluptates animi! Suscipit sapiente.
+                {description}
                 </Typography>
-                <Button variant="contained" color="primary">
+                <Button variant="contained"  color="secondary">
                     Show Now
                 </Button>
             </Box>

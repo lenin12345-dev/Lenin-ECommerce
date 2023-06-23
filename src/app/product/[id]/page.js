@@ -11,6 +11,7 @@ import { useParams } from "next/navigation";
 import { useEffect, } from "react";
 import ProductDetails  from "../../component/ProductDetails";
 import ImageContainer  from "../../component/ImageContainer";
+import PageLoader from '../../component/PageLoader';
 
 const API = "https://api.pujakaitem.com/api/products";
 
@@ -24,7 +25,12 @@ export default function SingleProduct() {
   useEffect(() => {
     getSingleProduct(`${API}?id=${id}`);
   }, []);
-  if (isSingleLoading) return <div>Loading...</div>
+  if (isSingleLoading && !Object.keys(singleProduct).length){
+    return <PageLoader/>
+   }
+
+  console.log('singleProduct',Object.keys(singleProduct).length);
+  console.log('isSingleLoading',isSingleLoading);
   return (
     <>
       <PageHeader title={singleProduct?.name} />
