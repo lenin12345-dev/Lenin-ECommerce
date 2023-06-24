@@ -8,10 +8,10 @@ import { useProductConetext } from "../../conetext/productConetext";
 import PageHeader from "../../component/PageHeader";
 import Container from "@mui/material/Container";
 import { useParams } from "next/navigation";
-import { useEffect, } from "react";
-import ProductDetails  from "../../component/ProductDetails";
-import ImageContainer  from "../../component/ImageContainer";
-import PageLoader from '../../component/PageLoader';
+import { useEffect } from "react";
+import ProductDetails from "../../component/ProductDetails";
+import ImageContainer from "../../component/ImageContainer";
+import PageLoader from "../../component/PageLoader";
 
 const API = "https://api.pujakaitem.com/api/products";
 
@@ -21,23 +21,22 @@ export default function SingleProduct() {
   const { isSingleLoading, getSingleProduct, singleProduct } =
     useProductConetext();
 
-
   useEffect(() => {
     getSingleProduct(`${API}?id=${id}`);
   }, []);
-  if (isSingleLoading && !Object.keys(singleProduct).length){
-    return <PageLoader/>
-   }
+  if (isSingleLoading && !Object.keys(singleProduct).length) {
+    return <PageLoader />;
+  }
 
-  console.log('singleProduct',Object.keys(singleProduct).length);
-  console.log('isSingleLoading',isSingleLoading);
+  console.log("singleProduct", Object.keys(singleProduct).length);
+  console.log("isSingleLoading", isSingleLoading);
   return (
     <>
       <PageHeader title={singleProduct?.name} />
-      <Container sx={{marginBottom:12}} maxWidth="xl">
-        <Box display= 'flex' justifyContent= 'space-between' mt={10}>
-            <ImageContainer singleProduct={singleProduct}/>
-            <ProductDetails singleProduct={singleProduct}/>
+      <Container sx={{ marginBottom: 12 }} maxWidth="xl">
+        <Box display="flex" justifyContent="space-between" mt={10}>
+          <ImageContainer singleProduct={singleProduct} />
+          <ProductDetails singleProduct={singleProduct} />
         </Box>
       </Container>
     </>

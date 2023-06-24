@@ -8,7 +8,6 @@ import { IconButton } from '@mui/material';
 import { Button, Typography } from "@mui/material";
 import Link from 'next/link';
 import {useCartConetext} from '../conetext/CartContext'
-import {useEffect} from "react"
 import { usePathname } from 'next/navigation'
 
 

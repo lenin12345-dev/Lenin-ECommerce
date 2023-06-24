@@ -11,7 +11,6 @@ import PaymentsIcon from '@mui/icons-material/Payments';
 import DoNotTouchIcon from '@mui/icons-material/DoNotTouch';
 import CurrencyExchangeIcon from '@mui/icons-material/CurrencyExchange';
 import Container from '@mui/material/Container';
-import theme from "../config/theme";
 
 const useStyles = makeStyles((theme) => ({
   heroImage: {

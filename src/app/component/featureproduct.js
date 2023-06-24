@@ -4,12 +4,8 @@
 
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import { useProductConetext } from '../conetext/productConetext';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
+import { useProductConetext } from '../conetext/productConetext';;
 import Typography from '@mui/material/Typography';
-import { CardActionArea } from '@mui/material';
 import Container from '@mui/material/Container';
 import Product  from './product';
 
