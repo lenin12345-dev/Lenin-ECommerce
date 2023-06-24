@@ -1,5 +1,4 @@
-'use client'
-
+"use client";
 
 // import FeatureProduct from "./components/FeatureProduct";
 import HeroSection from "./component/herosection";
@@ -7,19 +6,13 @@ import Services from "./component/services";
 import Trusted from "./component/trusted";
 import FeatureProduct from "./component/featureproduct";
 
-
 const Home = () => {
-
-
   return (
     <>
-      <HeroSection  />
+      <HeroSection />
       <FeatureProduct />
       <Services />
-      <Trusted /> 
- 
-     
-     
+      <Trusted />
     </>
   );
 };
