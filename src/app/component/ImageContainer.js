@@ -36,7 +36,7 @@ export default function ImageContainer({singleProduct={image:[{url:''}]}}) {
             {
              singleProduct && singleProduct.image.length &&   singleProduct.image.map((each)=>{
                 return (
-                    <img style={{ height:100,width:180,marginBottom:4}} key={each.id} src={each.url} alt={each.filename}
+                    <img style={{ height:100,width:180,marginBottom:4,cursor:'pointer'}} key={each.id} src={each.url} alt={each.filename}
                     onClick={()=>setImage(each)}
                     />
                 )
@@ -55,3 +55,5 @@ export default function ImageContainer({singleProduct={image:[{url:''}]}}) {
 
   );
 }
+182421
+senior manager
