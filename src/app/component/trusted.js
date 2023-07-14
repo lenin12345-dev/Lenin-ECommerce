@@ -4,22 +4,7 @@ import Box from "@mui/material/Box";
 import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles((theme) => ({
-  heroImage: {
-    position:'relative',
-    zIndex:5,
-    '&::after': {
-      content: "''",
-      position: 'absolute',
-      top: '-38px',
-      left: '60%',
-      width: '46%',
-      height: '68%',
-      backgroundColor: 'paleturquoise',
-      zIndex:-1
-      // other styles for the pseudo-element
-    },
-  
-  },
+
   gridItem:{
     display: 'flex',
     alignItems:'space-around',
