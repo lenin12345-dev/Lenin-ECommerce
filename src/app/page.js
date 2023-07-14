@@ -3,6 +3,8 @@
 import LandingPage from "./landingpage";
 import { makeStyles } from "@mui/styles";
 
+import dynamic from 'next/dynamic'
+
 
 const useStyles = makeStyles((theme) => ({
   pageLayout: {
