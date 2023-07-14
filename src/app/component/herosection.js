@@ -56,14 +56,12 @@ export default function HeroSection() {
         </Grid>
         <Grid item xs={4}sm={12} md={12} lg={7} xl={7}>
           <Box className = {classes.heroImage} display='flex' justifyContent='flex-end'>
-            <React.Suspense>
 
         <img
                 src="images/hero.jpg"
                 alt="hero-section-photo"
                 style={{ width:'80%'}}
               />
-            </React.Suspense>
 
               <Box sx={{    position: 'absolute',
       top: -70,
