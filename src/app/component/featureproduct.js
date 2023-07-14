@@ -29,7 +29,7 @@ export default function FeatureProduct() {
      {
     featureProducts && featureProducts.length && featureProducts.map((each)=>{
         return(
-            <Product id = {each.id} {...each} />
+            <Product key = {each.id} {...each} />
         )
      })   
      }

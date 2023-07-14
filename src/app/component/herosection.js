@@ -11,7 +11,7 @@ import Container from '@mui/material/Container';
 const useStyles = makeStyles((theme) => ({
   heroImage: {
     position:'relative',
-    zIndex:5,
+    zIndex:999,
     // '&::after': {
     //   content: "''",
     //   position: 'absolute',
@@ -62,12 +62,12 @@ export default function HeroSection() {
                 style={{ width:'80%'}}
               />
               <Box sx={{    position: 'absolute',
-      top: '-38px',
-      left: '60%',
-      width: '46%',
-      height: '68%',
+      top: -70,
+      right: -60,
+      width: 250,
+      height: 200,
       backgroundColor: 'paleturquoise',
-      zIndex:-1 }}>
+      zIndex:-100}}>
 
               </Box>
               </Box>
