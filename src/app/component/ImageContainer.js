@@ -55,5 +55,4 @@ export default function ImageContainer({singleProduct={image:[{url:''}]}}) {
 
   );
 }
-182421
-senior manager
+

@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
         domain= {domain}
         clientId={clientId}
         authorizationParams={{
-          redirect_uri: window.location.origin
+          // redirect_uri: window?.location.origin
         }}
     >
       <ThemeProvider theme={theme}>
