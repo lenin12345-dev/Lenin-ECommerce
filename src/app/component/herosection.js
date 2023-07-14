@@ -65,7 +65,7 @@ export default function HeroSection() {
               />
             </React.Suspense>
 
-              {/* <Box sx={{    position: 'absolute',
+              <Box sx={{    position: 'absolute',
       top: -70,
       right: -60,
       width: 250,
@@ -73,7 +73,7 @@ export default function HeroSection() {
       backgroundColor: 'paleturquoise',
       zIndex:-100}}>
 
-              </Box> */}
+              </Box>
               </Box>
         </Grid>
       </Grid>
