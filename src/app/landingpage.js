@@ -17,6 +17,4 @@ const LandingPage = () => {
   );
 };
 
-export default dynamic(() => Promise.resolve(LandingPage), {
-  ssr: false
-})
+export default LandingPage;

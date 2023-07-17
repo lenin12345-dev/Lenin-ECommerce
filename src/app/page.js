@@ -3,7 +3,6 @@
 import LandingPage from "./landingpage";
 import { makeStyles } from "@mui/styles";
 
-import dynamic from 'next/dynamic'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -11,8 +10,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#ffffff",
   },
 }));
-  
-function Home() {
+export default function Home() {
   const classes = useStyles();
 
   return (
@@ -21,6 +19,4 @@ function Home() {
     </div>
   );
 }
-export default dynamic(() => Promise.resolve(Home), {
-  ssr: false
-})
+
