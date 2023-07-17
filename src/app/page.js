@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
   
-export default function Home() {
+function Home() {
   const classes = useStyles();
 
   return (
@@ -21,4 +21,6 @@ export default function Home() {
     </div>
   );
 }
-
+export default dynamic(() => Promise.resolve(Home), {
+  ssr: false
+})

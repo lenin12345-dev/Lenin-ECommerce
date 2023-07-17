@@ -6,7 +6,7 @@ import Services from "./component/services";
 import Trusted from "./component/trusted";
 import FeatureProduct from "./component/featureproduct";
 
-const Home = () => {
+const LandingPage = () => {
   return (
     <>
       <HeroSection />
@@ -17,4 +17,6 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default dynamic(() => Promise.resolve(LandingPage), {
+  ssr: false
+})
