@@ -9,6 +9,8 @@ import { CartProvider } from './conetext/CartContext';
 import { Auth0Provider } from '@auth0/auth0-react';
 import { ThemeProvider } from '@mui/material/styles';
 import theme  from './config/theme';
+import { Suspense } from 'react'
+import Loader from './component/loading';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -36,7 +38,11 @@ export default function RootLayout({ children }) {
       <CartProvider>
 
         <Navbar/>
+        <Suspense fallback={<Loader/>}>
+
+     
         {children}
+        </Suspense>
         <Footer/>
         </CartProvider>
     </FilterContextProvider>

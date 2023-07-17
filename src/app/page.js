@@ -11,7 +11,8 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#ffffff",
   },
 }));
- function Home() {
+  
+export default function Home() {
   const classes = useStyles();
 
   return (
@@ -20,6 +21,4 @@ const useStyles = makeStyles((theme) => ({
     </div>
   );
 }
-export default dynamic(() => Promise.resolve(Home), {
-  ssr: false
-})
+
