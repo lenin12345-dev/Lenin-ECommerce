@@ -21,7 +21,7 @@ export default function Trusted() {
         mb={3}
         sx={{ fontSize: 20, fontWeight: "bold" }}
       >
-        Trusted By 1000+ companies
+        Trusted By 1000+ companies eeeee
       </Box>
       <Box display="flex" justifyContent="space-evenly" alignItems="center">
         <img
