@@ -23,10 +23,10 @@ export default function FeatureProduct() {
         <Box display="flex" alignItems="center" justifyContent="space-between">
           {featureProducts &&
             featureProducts.length &&
-            !isLoading &&
+            !isLoading ?
             featureProducts.map((each) => {
               return <Product key={each.id} {...each} />;
-            })}
+            }):null}
           {isLoading &&
             Array.from(new Array(3)).map((each, index) => {
               return (
