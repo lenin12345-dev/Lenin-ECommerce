@@ -7,22 +7,13 @@ import { makeStyles } from "@mui/styles";
 import Container from "@mui/material/Container";
 import Hero from '../../../public/image/hero.jpg'
 import Image from "next/image";
+import { Suspense } from "react";
 
 const useStyles = makeStyles((theme) => ({
   heroImage: {
     position: "relative",
     zIndex: 999,
-    // '&::after': {
-    //   content: "''",
-    //   position: 'absolute',
-    //   top: '-38px',
-    //   left: '60%',
-    //   width: '46%',
-    //   height: '68%',
-    //   backgroundColor: 'paleturquoise',
-    //   zIndex:-1
-    //   // other styles for the pseudo-element
-    // },
+    height:'auto'
   },
 }));
 
@@ -61,7 +52,7 @@ export default function HeroSection() {
           width={450}
           // className={classes.loader}
         />
-
+    <Suspense fallback={<span>Loading...</span>}>
               <Box
                 sx={{
                   position: "absolute",
@@ -72,7 +63,8 @@ export default function HeroSection() {
                   backgroundColor: "paleturquoise",
                   zIndex: -100,
                 }}
-              ></Box>
+              />
+              </Suspense>
             </Box>
           </Grid>
         </Grid>
