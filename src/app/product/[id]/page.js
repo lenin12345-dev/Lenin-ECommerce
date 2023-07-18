@@ -28,8 +28,7 @@ export default function SingleProduct() {
     return <PageLoader />;
   }
 
-  console.log("singleProduct", Object.keys(singleProduct).length);
-  console.log("isSingleLoading", isSingleLoading);
+
   return (
     <>
       <PageHeader title={singleProduct?.name} />
