@@ -2,11 +2,11 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import { Button, Skeleton, Typography } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import Container from "@mui/material/Container";
-import { Suspense } from "react";
-// import { LazyLoadImage } from 'react-lazy-load-image-component';
+import Hero from '../../../public/image/hero.jpg'
+import Image from "next/image";
 
 const useStyles = makeStyles((theme) => ({
   heroImage: {
@@ -49,18 +49,18 @@ export default function HeroSection() {
             </Box>
           </Grid>
           <Grid item xs={4} sm={12} md={12} lg={7} xl={7}>
-            <Suspense fallback={<Skeleton height={400} width={400}/>}>
-
             <Box
               className={classes.heroImage}
               display="flex"
               justifyContent="flex-end"
             >
-              <img
-                src="images/hero.jpg"
-                alt="hero-section-photo"
-                style={{ width: "80%" }}
-              />
+                <Image
+          src={Hero}
+          alt={"LectureNotes-loader"}
+          height={350}
+          width={450}
+          // className={classes.loader}
+        />
 
               <Box
                 sx={{
@@ -73,10 +73,7 @@ export default function HeroSection() {
                   zIndex: -100,
                 }}
               ></Box>
-
             </Box>
-            </Suspense>
-
           </Grid>
         </Grid>
       </Box>

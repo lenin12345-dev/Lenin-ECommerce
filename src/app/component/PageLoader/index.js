@@ -5,7 +5,7 @@ import React from "react";
 import { makeStyles } from "@mui/styles";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
-import Cartgif from "../../public/image//cart_gif.gif";
+import Cartgif from "../../../../public/image//cart_gif.gif";
 import Image from "next/image";
 
 const useStyles = makeStyles(() => ({
