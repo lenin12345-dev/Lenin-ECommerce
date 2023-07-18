@@ -2,7 +2,6 @@
 
 import LandingPage from "./landingpage";
 import { makeStyles } from "@mui/styles";
-import dynamic from 'next/dynamic'
 
 
 
@@ -11,9 +10,6 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#ffffff",
   },
 }));
- 
-
- 
 export default function Home() {
   const classes = useStyles();
 
