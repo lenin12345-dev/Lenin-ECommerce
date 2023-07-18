@@ -3,13 +3,10 @@
 // import FeatureProduct from "./components/FeatureProduct";
 import HeroSection from "./component/herosection";
 import Services from "./component/services";
-// import Trusted from "./component/trusted";
+import Trusted from "./component/trusted";
 import FeatureProduct from "./component/featureproduct";
-import dynamic from 'next/dynamic'
  
-const Trusted = dynamic(() => import('./component/trusted'), {
-  loading: () => <p>Loading...</p>,
-})
+
  
 
 const LandingPage = () => {

@@ -50,6 +50,7 @@ export default function HeroSection() {
           alt={"LectureNotes-loader"}
           height={350}
           width={450}
+          priority={true} 
           // className={classes.loader}
         />
     <Suspense fallback={<span>Loading...</span>}>
