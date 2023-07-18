@@ -7,20 +7,14 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Link from 'next/link';
 import { useCartConetext } from '../conetext/CartContext';
-import { useAuth0 } from '@auth0/auth0-react';
+
 export default function Navbar() {
   const {totalElement } = useCartConetext();
-  const {
-    isAuthenticated,
-    loginWithRedirect,
-    logout,
-    user
-  } = useAuth0();
+
   return (
     <Box  >
       <AppBar color='primary' position="static">
@@ -69,9 +63,9 @@ export default function Navbar() {
         </Link>
 
           </Typography>
- {isAuthenticated? <Button sx={{ mr: 4 }} onClick={()=>logout({ logoutParams: { returnTo: window.location.origin } })} variant='contained' color="secondary">Log Out</Button>:
+ {/* {isAuthenticated? <Button sx={{ mr: 4 }} onClick={()=>logout({ logoutParams: { returnTo: window.location.origin } })} variant='contained' color="secondary">Log Out</Button>:
 
-  <Button sx={{ mr: 4 }} onClick={() => loginWithRedirect()} variant='contained' color="secondary">Login</Button>}
+  <Button sx={{ mr: 4 }} onClick={() => loginWithRedirect()} variant='contained' color="secondary">Login</Button>} */}
 
 
       <Link href={`/cart`} >

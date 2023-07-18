@@ -2,8 +2,7 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 
-import { Button, Typography } from "@mui/material";
-import { makeStyles } from "@mui/styles";
+import { Typography } from "@mui/material";
 import FireTruckIcon from "@mui/icons-material/FireTruck";
 import PublishedWithChangesIcon from "@mui/icons-material/PublishedWithChanges";
 import WorkHistoryIcon from "@mui/icons-material/WorkHistory";
@@ -11,12 +10,9 @@ import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
 import Rating from '@mui/material/Rating';
 import AddToCart from '../component/AddToCart'
-const useStyles = makeStyles((theme) => ({
 
-}));
 
 export default function ProductDetails({ singleProduct }) {
-  const classes = useStyles();
 
   return (
     <Box sx={{ width: "50%" }}>
