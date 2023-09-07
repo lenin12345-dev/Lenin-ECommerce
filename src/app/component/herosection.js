@@ -10,14 +10,11 @@ import Image from "next/image";
 import { Suspense } from "react";
 
 const useStyles = makeStyles((theme) => ({
-  loader: {
+  heroImage: {
     position: "relative",
     zIndex: 999,
-    height:'auto',
-    display:'flex',
-    justifyContent:'end'
+    height:'auto'
   },
-
 }));
 
 export default function HeroSection() {
@@ -43,32 +40,24 @@ export default function HeroSection() {
             </Box>
           </Grid>
           <Grid item xs={4} sm={12} md={12} lg={7} xl={7}>
-         <div className= {classes.loader}>
-
+            <Box
+              className={classes.heroImage}
+              display="flex"
+              justifyContent="flex-end"
+            >
                 <Image
           src={Hero}
           alt={"LectureNotes-loader"}
           height={350}
           width={450}
-          
           priority={true} 
-          />
-          <Box
-          sx={{
-            position: "absolute",
-            top: -70,
-            right: -80,
-            width: 290,
-            height: 200,
-            backgroundColor: "paleturquoise",
-            zIndex: -100,
-          }}
+          // className={classes.loader}
         />
-        </div>
-            
+            </Box>
           </Grid>
         </Grid>
       </Box>
     </Container>
   );
 }
+
