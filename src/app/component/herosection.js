@@ -10,7 +10,7 @@ import Image from "next/image";
 import { Suspense } from "react";
 
 const useStyles = makeStyles((theme) => ({
-  heroImage: {
+  heroImages: {
     position: "relative",
     zIndex: 999,
     height:'auto'
@@ -41,7 +41,7 @@ export default function HeroSection() {
           </Grid>
           <Grid item xs={4} sm={12} md={12} lg={7} xl={7}>
             <Box
-              className={classes.heroImage}
+              className={classes.heroImages}
               display="flex"
               justifyContent="flex-end"
             >
@@ -60,4 +60,3 @@ export default function HeroSection() {
     </Container>
   );
 }
-
